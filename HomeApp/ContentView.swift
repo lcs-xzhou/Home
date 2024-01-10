@@ -59,5 +59,26 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    TabView(selection: Binding.constant(3))  {
+        
+        ContentView()
+            .tabItem {
+                Image(systemName: "house.fill")
+                Text("Home")
+            }
+        
+        Text("Automation") 
+            .tabItem {
+                Image(systemName: "deskclock.fill")
+                Text("Automation")
+            }
+        
+        
+        Text("Discover")
+            .tabItem {
+                Image(systemName: "star.fill")
+                Text("Discover")
+            }
+    }
+    .accentColor(.white)
 }
