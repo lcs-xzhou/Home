@@ -28,12 +28,40 @@ struct ContentView: View {
                     Spacer()
                 }
                 HStack {
-                    Rectangle()
-                    Rectangle()
+                    ZStack {
+                        Rectangle()
+                            .tint(.white)
+                        HStack {
+                            Image(systemName: "door.garage.closed")
+                            BoxStruct(Text1: "Garage", Text2: "Door", Text3: "Closed")
+                        }
+                    }
+                    ZStack {
+                        Rectangle()
+                            .tint(.white)
+                        HStack {
+                            Text("17.5")
+                            BoxStruct(Text1: "Hallway", Text2: "Nest", Text3: "Heat to 12.0")
+                        }
+                    }
                 }
                 HStack {
-                    Rectangle()
-                    Rectangle()
+                    ZStack {
+                        Rectangle()
+                            .tint(.white)
+                        HStack {
+                            Image(systemName: "lock.fill")
+                            BoxStruct(Text1: "Hallway", Text2: "Nest", Text3: "Heat to 12.0")
+                        }
+                    }
+                    ZStack {
+                        Rectangle()
+                            .tint(.white)
+                        HStack {
+                            Image(systemName: "lock.fill")
+                            BoxStruct(Text1: "Basement", Text2: "Side Door", Text3: "Locked")
+                        }
+                    }
                 }
             }
             VStack {
