@@ -14,6 +14,9 @@ struct ContentView: View {
             VStack {
                 HStack {
                     Text("My Home")
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
                     Spacer()
                 }
                 HStack {
@@ -29,38 +32,19 @@ struct ContentView: View {
                 }
                 HStack {
                     ZStack {
-                        Rectangle()
-                            .tint(.white)
-                        HStack {
-                            Image(systemName: "door.garage.closed")
-                            BoxStruct(Text1: "Garage", Text2: "Door", Text3: "Closed")
-                        }
+                        BoxStruct(Text1: "Garage", Text2: "Door", Text3: "Closed", color: .black)
                     }
                     ZStack {
-                        Rectangle()
-                            .tint(.white)
-                        HStack {
-                            Text("17.5")
-                            BoxStruct(Text1: "Hallway", Text2: "Nest", Text3: "Heat to 12.0")
-                        }
+                        BoxStruct(Text1: "Hallway", Text2: "Nest", Text3: "Heat to 12.0", color: .white)
                     }
                 }
                 HStack {
                     ZStack {
                         Rectangle()
-                            .tint(.white)
-                        HStack {
-                            Image(systemName: "lock.fill")
-                            BoxStruct(Text1: "Hallway", Text2: "Nest", Text3: "Heat to 12.0")
-                        }
+                        BoxStruct(Text1: "Living Room", Text2: "Front Door", Text3: "Locked", color: .black)
                     }
                     ZStack {
-                        Rectangle()
-                            .tint(.white)
-                        HStack {
-                            Image(systemName: "lock.fill")
-                            BoxStruct(Text1: "Basement", Text2: "Side Door", Text3: "Locked")
-                        }
+                        BoxStruct(Text1: "Basement", Text2: "Side Door", Text3: "Locked", color: .black)
                     }
                 }
             }
@@ -83,6 +67,16 @@ struct ContentView: View {
             }
         }
         .padding()
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Image(systemName: "waveform")
+                    .foregroundColor(.white)
+                Image(systemName: "plus")
+                    .foregroundColor(.white)
+                Image(systemName: "ellipsis.circle")
+                    .foregroundColor(.white)
+            }
+        }
     }
 }
 
@@ -109,4 +103,5 @@ struct ContentView: View {
             }
     }
     .accentColor(.white)
+    .preferredColorScheme(.dark)
 }
