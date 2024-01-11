@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct MyHomeStructure: View {
+    
+    
+    let Text4: String
+    let Text5: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Rectangle()
+                .frame(height: 40)
+                .cornerRadius(17)
+                .foregroundColor(.black)
+            VStack {
+                Text(Text4)
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                Text(Text5)
+                    .foregroundColor(.gray)
+            }
+        }
     }
 }
 
 #Preview {
-    MyHomeStructure()
+    MyHomeStructure(Text4: "Climate", Text5: "16.0-20.5")
 }

@@ -13,6 +13,7 @@
 		2D0ECF762B4DDB8D009366D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D0ECF752B4DDB8D009366D0 /* Preview Assets.xcassets */; };
 		2D0ECF9A2B4E3499009366D0 /* BoxStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0ECF992B4E3499009366D0 /* BoxStruct.swift */; };
 		2D1C6F982B4F70BC000E199E /* MyHomeStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C6F972B4F70BC000E199E /* MyHomeStructure.swift */; };
+		2D1C6F9A2B4F7E55000E199E /* BasementStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C6F992B4F7E55000E199E /* BasementStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2D0ECF752B4DDB8D009366D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2D0ECF992B4E3499009366D0 /* BoxStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxStruct.swift; sourceTree = "<group>"; };
 		2D1C6F972B4F70BC000E199E /* MyHomeStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomeStructure.swift; sourceTree = "<group>"; };
+		2D1C6F992B4F7E55000E199E /* BasementStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasementStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +41,6 @@
 		2D0ECF622B4DDB8C009366D0 = {
 			isa = PBXGroup;
 			children = (
-				2D1C6F972B4F70BC000E199E /* MyHomeStructure.swift */,
 				2D0ECF6D2B4DDB8C009366D0 /* HomeApp */,
 				2D0ECF6C2B4DDB8C009366D0 /* Products */,
 			);
@@ -61,6 +62,7 @@
 				2D0ECF722B4DDB8D009366D0 /* Assets.xcassets */,
 				2D0ECF742B4DDB8D009366D0 /* Preview Content */,
 				2D0ECF992B4E3499009366D0 /* BoxStruct.swift */,
+				2D1C6F972B4F70BC000E199E /* MyHomeStructure.swift */,
 			);
 			path = HomeApp;
 			sourceTree = "<group>";
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				2D0ECF752B4DDB8D009366D0 /* Preview Assets.xcassets */,
+				2D1C6F992B4F7E55000E199E /* BasementStruct.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1C6F9A2B4F7E55000E199E /* BasementStruct.swift in Sources */,
 				2D1C6F982B4F70BC000E199E /* MyHomeStructure.swift in Sources */,
 				2D0ECF9A2B4E3499009366D0 /* BoxStruct.swift in Sources */,
 				2D0ECF712B4DDB8C009366D0 /* ContentView.swift in Sources */,
