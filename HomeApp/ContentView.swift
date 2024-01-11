@@ -9,16 +9,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    let gradientColors = Gradient(colors: [Color.blue, Color.yellow])
-    
     var body: some View {
-        let linearGradient = LinearGradient(LinearGradient(gradient: gradientColors, startPoint: .topLeading, endPoint: .bottomTrailing))
+        
+        let gradientColors = Gradient(colors: [Color.blue, Color.yellow])
         
         return ZStack {
             
-            Capsule()
-                .fill(LinearGradient)
+            LinearGradient(gradient: gradientColors, startPoint: .topLeading, endPoint: .topTrailing)
                 .ignoresSafeArea()
             
             NavigationStack {
@@ -34,12 +31,11 @@ struct ContentView: View {
                         HStack {
                             ZStack {
                                 MyHomeStructure(Text4: "Climate", Text5: "16.0-20.5")
-                                    .padding(.leading)
                                 HStack {
                                     Image(systemName: "fan.fill")
                                         .resizable()
                                         .scaledToFit()
-                                        .frame(height:20)
+                                        .frame(height: 15)
                                         .foregroundColor(.blue)
                                     Spacer()
                                 }
@@ -47,12 +43,11 @@ struct ContentView: View {
                             .padding(.trailing)
                             ZStack {
                                 MyHomeStructure(Text4: "Security", Text5: "No Alerts")
-                                    .padding(.leading)
                                 HStack {
                                     Image(systemName: "lock.fill")
                                         .resizable()
                                         .scaledToFit()
-                                        .frame(height:20)
+                                        .frame(height:15)
                                         .foregroundColor(.green)
                                     Spacer()
                                 }
@@ -60,12 +55,11 @@ struct ContentView: View {
                             .padding(.trailing)
                             ZStack {
                                 MyHomeStructure(Text4: "Speakers", Text5: "None Play")
-                                    .padding(.leading)
                                 HStack {
                                     Image(systemName: "tv.and.mediabox.fill")
                                         .resizable()
                                         .scaledToFit()
-                                        .frame(height:20)
+                                        .frame(height: 15)
                                         .foregroundColor(.gray)
                                     Spacer()
                                 }
@@ -82,7 +76,7 @@ struct ContentView: View {
                         .padding(.top)
                         HStack {
                             ZStack {
-                                BoxStruct(Text1: "Garage", Text2: "Door", Text3: "Closed", color: .black, color2: .white)
+                                BoxStruct(Text1: "Garage", Text2: "Door", Text3: "Closed", color: .DB, color2: .white)
                                 HStack {
                                     Image(systemName: "door.garage.closed")
                                         .resizable()
@@ -108,7 +102,7 @@ struct ContentView: View {
                         }
                         HStack {
                             ZStack {
-                                BoxStruct(Text1: "Living Room", Text2: "Front Door", Text3: "Locked", color: .black, color2: .white)
+                                BoxStruct(Text1: "Living Room", Text2: "Front Door", Text3: "Locked", color: .DB, color2: .white)
                                 HStack {
                                     Image(systemName: "lock.fill")
                                         .resizable()
@@ -121,7 +115,7 @@ struct ContentView: View {
                             }
                             .padding(.trailing)
                             ZStack {
-                                BoxStruct(Text1: "Basement", Text2: "Side Door", Text3: "Locked", color: .black, color2: .white)
+                                BoxStruct(Text1: "Basement", Text2: "Side Door", Text3: "Locked", color: .DB, color2: .white)
                                 HStack {
                                     Image(systemName: "lock.fill")
                                         .resizable()
@@ -185,7 +179,7 @@ struct ContentView: View {
                         HStack {
                             ZStack {
                                 Rectangle()
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.DB)
                                     .cornerRadius(15)
                                     .frame(height: 160)
                                 VStack {
@@ -218,7 +212,7 @@ struct ContentView: View {
                             .padding(.trailing)
                             VStack {
                                 ZStack {
-                                    BasementStruct(Text6: "Apple TV", Text7: "Not Playing", color3: .black, color4: .white)
+                                    BasementStruct(Text6: "Apple TV", Text7: "Not Playing", color3: .DB, color4: .white)
                                     HStack {
                                         Image(systemName: "appletv.fill")
                                             .resizable()
@@ -230,7 +224,7 @@ struct ContentView: View {
                                     }
                                 }
                                 ZStack {
-                                    BasementStruct(Text6: "HomePad", Text7: "Not Playing", color3: .black, color4: .white)
+                                    BasementStruct(Text6: "HomePad", Text7: "Not Playing", color3: .DB, color4: .white)
                                     HStack {
                                         Image(systemName: "homepodmini.fill")
                                             .resizable()

@@ -18,13 +18,15 @@ struct MyHomeStructure: View {
             Rectangle()
                 .frame(height: 40)
                 .cornerRadius(17)
-                .foregroundColor(.black)
+                .foregroundColor(.DB)
             VStack {
                 Text(Text4)
                     .foregroundColor(.white)
                     .fontWeight(.bold)
+                    .font(.footnote)
                 Text(Text5)
                     .foregroundColor(.gray)
+                    .font(.footnote)
             }
         }
     }
