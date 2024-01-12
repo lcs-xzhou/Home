@@ -9,16 +9,16 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    let gradientColors = Gradient(colors: [Color.blue1, Color.yellow1])
+    
     var body: some View {
-        
-        let gradientColors = Gradient(colors: [Color.blue, Color.yellow])
-        
-        return ZStack {
-            
-            LinearGradient(gradient: gradientColors, startPoint: .topLeading, endPoint: .topTrailing)
-                .ignoresSafeArea()
-            
-            NavigationStack {
+        NavigationStack {
+            ZStack {
+                
+                LinearGradient(gradient: gradientColors, startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .ignoresSafeArea()
+                
                 VStack {
                     VStack {
                         HStack {
@@ -36,7 +36,7 @@ struct ContentView: View {
                                         .resizable()
                                         .scaledToFit()
                                         .frame(height: 15)
-                                        .foregroundColor(.blue)
+                                        .foregroundColor(.G)
                                     Spacer()
                                 }
                             }
@@ -48,7 +48,7 @@ struct ContentView: View {
                                         .resizable()
                                         .scaledToFit()
                                         .frame(height:15)
-                                        .foregroundColor(.green)
+                                        .foregroundColor(.G)
                                     Spacer()
                                 }
                             }
@@ -81,8 +81,8 @@ struct ContentView: View {
                                     Image(systemName: "door.garage.closed")
                                         .resizable()
                                         .scaledToFit()
-                                        .frame(height:30)
-                                        .foregroundColor(.green)
+                                        .frame(height:25)
+                                        .foregroundColor(.G)
                                         .padding(.leading)
                                     Spacer()
                                 }
@@ -107,8 +107,8 @@ struct ContentView: View {
                                     Image(systemName: "lock.fill")
                                         .resizable()
                                         .scaledToFit()
-                                        .frame(height:30)
-                                        .foregroundColor(.green)
+                                        .frame(height:25)
+                                        .foregroundColor(.G)
                                         .padding(.leading)
                                     Spacer()
                                 }
@@ -120,8 +120,8 @@ struct ContentView: View {
                                     Image(systemName: "lock.fill")
                                         .resizable()
                                         .scaledToFit()
-                                        .frame(height:30)
-                                        .foregroundColor(.green)
+                                        .frame(height:25)
+                                        .foregroundColor(.G)
                                         .padding(.leading)
                                     Spacer()
                                 }
@@ -184,13 +184,18 @@ struct ContentView: View {
                                     .frame(height: 160)
                                 VStack {
                                     HStack {
-                                        Image(systemName: "lock.fill")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(height:30)
-                                            .foregroundColor(.green)
-                                            .padding()
-                                            .padding(.leading)
+                                        ZStack {
+                                            Circle()
+                                                .foregroundColor(.black)
+                                                .frame(height: 50)
+                                            Image(systemName: "lock.fill")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(height:25)
+                                                .foregroundColor(.G)
+                                        }
+                                        .padding(.top)
+                                    .padding(.leading)
                                         Spacer()
                                     }
                                     Spacer()
